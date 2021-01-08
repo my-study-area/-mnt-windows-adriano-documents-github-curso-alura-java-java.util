@@ -13,3 +13,11 @@ Java e java.util: Coleções, Wrappers e Lambda expressions
 - Ao acessar uma posição inválida recebemos a exceção - ArrayIndexOutOfBoundException
 - Arrays possuem um atributo length para saber o tamanho
 - A forma literal de criar uma Array é com o uso de chaves {}. Ex: `int[] refs = {1,2,3,4,5};`;
+
+### Aula: Guardando qualquer referência
+Utilizando Array String do método `public static void main(String[] args)`:
+
+```bash
+cd bin
+java br.com.bytebank.banco.test.TestArrayString 12 3 4
+```
