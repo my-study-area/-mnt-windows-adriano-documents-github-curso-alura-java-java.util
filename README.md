@@ -21,3 +21,8 @@ Utilizando Array String do método `public static void main(String[] args)`:
 cd bin
 java br.com.bytebank.banco.test.TestArrayString 12 3 4
 ```
+- uma array do tipo Object pode guardar qualquer tipo de referência
+- quando convertemos uma referência genérica para uma referência mais específica é preciso usar um type cast
+- o cast só compila quando é possível, mesmo assim pode falhar na hora de rodar
+- quando o type cast falha podemos receber uma ClassCastException
+- para receber valores ao chamar o programa Java na linha de comando podemos usar o array String[] no método main
