@@ -26,3 +26,11 @@ java br.com.bytebank.banco.test.TestArrayString 12 3 4
 - o cast só compila quando é possível, mesmo assim pode falhar na hora de rodar
 - quando o type cast falha podemos receber uma ClassCastException
 - para receber valores ao chamar o programa Java na linha de comando podemos usar o array String[] no método main
+
+### Módulo: ArrayList e Generics
+- a classe java.util.ArrayList encapsula o uso do array e oferece vários métodos de mais alto nível
+- uma lista guarda referencias
+- como usar métodos size, get, remove
+- como usar o foreach para iterar a ArrayList
+- os generics parametrizam classes
+- no caso da ArrayList podemos definir o tipo dos elementos através de generics
