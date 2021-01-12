@@ -47,3 +47,9 @@ java br.com.bytebank.banco.test.TestArrayString 12 3 4
     - inserção e remoção performática em qualquer posição, também no início
     - acesso mais demorado pelo índice, é preciso pesquisar os elementos
 - a interface java.util.List que define os métodos da lista
+
+### Módulo: Vector e a interface Collection
+- o `java.util.Vector`, que é uma `ArrayList `thread safe
+- a interface `java.util.Collection` que é a interface de todas as coleções
+- as listas são sequencias que aceitam elementos duplicados
+- os conjuntos (`java.util.Set`) também são coleções, mas não aceitam duplicados nem são listas
