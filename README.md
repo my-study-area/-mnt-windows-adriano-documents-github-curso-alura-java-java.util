@@ -34,3 +34,16 @@ java br.com.bytebank.banco.test.TestArrayString 12 3 4
 - como usar o foreach para iterar a ArrayList
 - os generics parametrizam classes
 - no caso da ArrayList podemos definir o tipo dos elementos através de generics
+
+### Módulo: Equals e mais listas
+- utilizamos a sobrescrita do método equals para verificar a igualdade das referências
+- que o método equals é utilizado pelas listas
+- que existe mais uma lista, a java.util.LinkedList
+- a diferença entre ArrayList e LinkedList
+  - Arraylist:
+    - acesso fácil e performático pelo índice
+    - elementos precisam ser copiados quando não há mais capacidade
+  - LinkedList
+    - inserção e remoção performática em qualquer posição, também no início
+    - acesso mais demorado pelo índice, é preciso pesquisar os elementos
+- a interface java.util.List que define os métodos da lista
