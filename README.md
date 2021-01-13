@@ -53,3 +53,12 @@ java br.com.bytebank.banco.test.TestArrayString 12 3 4
 - a interface `java.util.Collection` que é a interface de todas as coleções
 - as listas são sequencias que aceitam elementos duplicados
 - os conjuntos (`java.util.Set`) também são coleções, mas não aceitam duplicados nem são listas
+
+### Módulo: As classes Wrappers
+- para cada primitivo existe uma classe chamada `Wrapper`
+- para guardar um primitivo numa coleção é preciso criar um objeto que embrulha o valor
+- a criação do objeto `Wrapper` é chamada de `autoboxing`
+- a retirada do valor primitivo do objeto `Wrapper` é chamada de `unboxing`
+- `autoboxing` e `unboxing` acontecem automaticamente.
+- as classes wrapper possuem vários métodos auxiliares, por exemplo para o parsing
+- todas as classes wrappers que representam um valor numérico possuem a classe `java.lang.Number` como mãe
