@@ -55,6 +55,14 @@ public class TesteOrderList {
         for (Conta conta : lista) {
 			System.out.println(conta + ", " + conta.getTitular().getNome());
         }
+        
+        TitularDaContaComparator titularComparator = new TitularDaContaComparator();
+        lista.sort(titularComparator);
+        
+        System.out.println("Lista com ordenação por nome do titular da conta");
+        for (Conta conta : lista) {
+        	System.out.println(conta + ", " + conta.getTitular().getNome());
+        }
 
 	}
 
@@ -78,3 +86,13 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 	
 }
 
+class TitularDaContaComparator implements Comparator<Conta> {
+
+	@Override
+	public int compare(Conta conta1, Conta conta2) {
+		String nomeDaConta1 = conta1.getTitular().getNome();
+		String nomeDaConta2 = conta2.getTitular().getNome();
+		return nomeDaConta1.compareTo(nomeDaConta2);
+	}
+	
+}
