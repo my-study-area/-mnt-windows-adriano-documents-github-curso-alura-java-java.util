@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -51,6 +52,7 @@ public class TesteOrderList {
         NumeroDaContaComparator numeroDaContaComparator = new NumeroDaContaComparator();
         lista.sort(numeroDaContaComparator);
         
+        System.out.println("");
         System.out.println("Lista com ordenação por número da conta");
         for (Conta conta : lista) {
 			System.out.println(conta + ", " + conta.getTitular().getNome());
@@ -59,11 +61,27 @@ public class TesteOrderList {
 //        TitularDaContaComparator titularComparator = new TitularDaContaComparator();
         lista.sort(new TitularDaContaComparator());
         
+        System.out.println("");
         System.out.println("Lista com ordenação por nome do titular da conta");
         for (Conta conta : lista) {
         	System.out.println(conta + ", " + conta.getTitular().getNome());
         }
 
+        // ordenação antes do java 8
+        Collections.sort(lista, new NumeroDaContaComparator());
+        
+        System.out.println("");
+        System.out.println("Lista com ordenação por número da conta usando Collections");
+        for (Conta conta : lista) {
+        	System.out.println(conta + ", " + conta.getTitular().getNome());
+        }
+        
+        Collections.reverse(lista);
+        System.out.println("");
+        System.out.println("Lista com ordenação reversa por número da conta usando Collections");
+        for (Conta conta : lista) {
+        	System.out.println(conta + ", " + conta.getTitular().getNome());
+        }
 	}
 
 }
