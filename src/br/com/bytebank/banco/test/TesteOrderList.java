@@ -56,8 +56,8 @@ public class TesteOrderList {
 			System.out.println(conta + ", " + conta.getTitular().getNome());
         }
         
-        TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-        lista.sort(titularComparator);
+//        TitularDaContaComparator titularComparator = new TitularDaContaComparator();
+        lista.sort(new TitularDaContaComparator());
         
         System.out.println("Lista com ordenação por nome do titular da conta");
         for (Conta conta : lista) {
@@ -73,15 +73,22 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 	@Override
 	public int compare(Conta conta1, Conta conta2) {
 
-		if (conta1.getNumero() > conta2.getNumero()) {
-			return 1;
-		}
+//		opção 1
+		return Integer.compare(conta1.getNumero(),conta2.getNumero());
 		
-		if (conta1.getNumero() < conta2.getNumero()) {
-			return -1;
-		}
+//		opção 2
+//		return conta1.getNumero() - conta2.getNumero();
 		
-		return 0;
+//      opção 3
+//		if (conta1.getNumero() > conta2.getNumero()) {
+//			return 1;
+//		}
+//		
+//		if (conta1.getNumero() < conta2.getNumero()) {
+//			return -1;
+//		}
+//		
+//		return 0;
 	}
 	
 }
