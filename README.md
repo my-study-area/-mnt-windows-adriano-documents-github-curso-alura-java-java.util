@@ -62,3 +62,13 @@ java br.com.bytebank.banco.test.TestArrayString 12 3 4
 - `autoboxing` e `unboxing` acontecem automaticamente.
 - as classes wrapper possuem vários métodos auxiliares, por exemplo para o parsing
 - todas as classes wrappers que representam um valor numérico possuem a classe `java.lang.Number` como mãe
+
+### Módulo: Ordenação de listas
+- para ordenar uma lista é preciso definir um critério de ordenação
+- há duas formas de definir esse critério
+  - pela interface `Comparator`
+  - pela interface `Comparable` (ordem natural)
+- o algoritmo de ordenação já foi implementado
+  - na lista no método sort
+  - na classe Collections pelo método sort
+- a classe Collections é uma fachada com vários métodos auxiliares para - trabalhar com as coleções, principalmente listas
