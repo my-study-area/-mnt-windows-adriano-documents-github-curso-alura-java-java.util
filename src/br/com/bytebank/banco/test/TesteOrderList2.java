@@ -3,6 +3,7 @@ package br.com.bytebank.banco.test;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
@@ -43,35 +44,22 @@ public class TesteOrderList2 {
         lista.add(cc3);
         lista.add(cc4);
         
-        lista.sort(new Comparator<Conta>() {
-			@Override
-			public int compare(Conta c1, Conta c2) {
-				return Integer.compare(c1.getNumero(), c2.getNumero());
-			}
-        	
-		});
+        lista.sort((c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
         
         System.out.println("");
         System.out.println("Lista com ordenação por número da conta");
-        for (Conta conta : lista) {
-			System.out.println(conta + ", " + conta.getTitular().getNome());
-        }
+        lista.forEach( conta -> System.out.println(conta + ", " + conta.getTitular().getNome()));
         
-        Comparator<Conta> comp = new Comparator<Conta>() {
-            @Override
-            public int compare(Conta c1, Conta c2) {
-                String nomeC1 = c1.getTitular().getNome();
-                String nomeC2 = c2.getTitular().getNome();
-                return nomeC1.compareTo(nomeC2);
-            }
+        Comparator<Conta> comp = (c1, c2) -> {
+            String nomeC1 = c1.getTitular().getNome();
+            String nomeC2 = c2.getTitular().getNome();
+            return nomeC1.compareTo(nomeC2);
         };
         lista.sort(comp);
         
         System.out.println("");
         System.out.println("Lista com ordenação por nome do titular da conta");
-        for (Conta conta : lista) {
-        	System.out.println(conta + ", " + conta.getTitular().getNome());
-        }
+        lista.forEach( conta -> System.out.println(conta + ", " + conta.getTitular().getNome()));
 
 	}
 
