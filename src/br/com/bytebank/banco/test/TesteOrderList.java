@@ -82,6 +82,21 @@ public class TesteOrderList {
         for (Conta conta : lista) {
         	System.out.println(conta + ", " + conta.getTitular().getNome());
         }
+        
+        Collections.sort(lista);
+        System.out.println("");
+        System.out.println("Lista com ordenação por saldo da conta usando Collections na ordem natural");
+        for (Conta conta : lista) {
+        	System.out.println(conta + ", " + conta.getTitular().getNome());
+        }
+        
+        // Má prática - NÃO USAR
+        lista.sort(null);
+        System.out.println("");
+        System.out.println("Lista com ordenação por saldo da conta usando método sort de List");
+        for (Conta conta : lista) {
+        	System.out.println(conta + ", " + conta.getTitular().getNome());
+        }
 	}
 
 }
